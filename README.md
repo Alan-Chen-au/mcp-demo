@@ -1,5 +1,9 @@
 # mcp-demo
-how to create mcp and use it.
+create mcp server and client. This project is based on PyCharm.
+
+mcp server: weather_server.py
+client: client.py
+
 
 1, add your OPENAI_API_KEY in .env file
 
