@@ -25,7 +25,7 @@ async def main():
     # 2. MCP Server (local)
     server_params = StdioServerParameters(
         command="python",
-        args=["/Users/alanchen/PycharmProjects/mcp-demo/servers/weather_server.py"],
+        args=["/Users/alanchen/PycharmProjects/mcp-demo/weather_server.py"],
     )
 
     print("Connecting to MCP Server...")
@@ -50,7 +50,7 @@ async def main():
             print("Agent ready.")
 
             # 7. Ask the question
-            query = "What is the weather in Chicago?"
+            query = "What is the weather in New York?"
             print(f"\nUser: {query}")
             print("Agent is thinking...")
 
