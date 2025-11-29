@@ -1,6 +1,6 @@
-import asyncio
 import httpx
 from mcp.server.fastmcp import FastMCP
+
 
 # Create the MCP Server
 # We verify this works with Python 3.12+
@@ -36,10 +36,11 @@ async def get_weather(city: str) -> str:
             weather_data = weather_res.json()
 
             current = weather_data.get("current_weather", {})
+            print("weather_data: ", current)
             temp = current.get("temperature")
             wind = current.get("windspeed")
 
-            return f"Weather in {city}: {temp}°C, Wind Speed: {wind} km/h"
+            return f"Weather in {city}: {temp}°C, Wind Speed: {wind} km/h."
 
         except Exception as e:
             return f"API Error: {str(e)}"
