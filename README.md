@@ -2,6 +2,7 @@
 create a weather mcp server and client. This project is based on PyCharm + pipenv.
 
 mcp server: weather_server.py
+
 client: client.py
 
 
