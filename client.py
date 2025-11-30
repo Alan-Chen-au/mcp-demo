@@ -22,10 +22,12 @@ async def main():
         print("Error: OPENAI_API_KEY not found. Please create a .env file with OPENAI_API_KEY=sk-...")
         return
 
+    base_path = os.getcwd()
+
     # 2. MCP Server (local)
     server_params = StdioServerParameters(
         command="python",
-        args=["/Users/alanchen/PycharmProjects/mcp-demo/weather_server.py"],
+        args=[os.path.join(base_path, "weather_server.py")],
     )
 
     print("Connecting to MCP Server...")
